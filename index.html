@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: red;
+}
+p {
+  font-size: 200%;
+  font-style: italic;
+}
+
+
+</style>
+</head>
+<body background ="pap.jpg">
+<audio autoplay loop>
+  <source src="TheBuilder.mp3">
+</audio>
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="score.html">Your Score</a></li>
+</ul>
+<h1> <center>Tests your knowledge in Computer Science and Python! </center> </h1>
+<center><p> Your Name: </p></center>
+<center><input type accept="text" id="uname"></center><br>
+  <center><button id="sub">Submit</button></center>
+  
+  <center><p> Take one or both of our test in either Computer Science or Python!</p>
+  <p> Find out how much you know about programming!</p></center>
+</body>
+<script>
+localStorage.setItem("cheat", "0");
+document.getElementById("sub").addEventListener("click", sname); 
+
+function sname() {
+    var x = document.getElementById("uname").value;
+    localStorage.setItem("username", x);
+    window.location.href ='rules.html';
+}
+</script>
+</html>

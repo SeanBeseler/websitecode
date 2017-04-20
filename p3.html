@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: red;
+}
+p {
+  font-size: 200%;
+  font-style: italic;
+}
+
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid black;
+    padding: 25px;
+    margin: 25px;
+}
+w
+
+</style>
+</head>
+<body background ="pap.jpg">
+<audio autoplay loop>
+  <source src="TheBuilder.mp3">
+</audio>
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="score.html">Your Score</a></li>
+</ul>
+<h1> <center> Python Quiz Question 3 </center> </h1>
+<center><div> What is the output: a =[4,5,6,None,(),[],] print len(a)<br><br><form>
+  <input onclick = "getanswer()" type="radio" name="answer" value="T" > 3 <br>
+  <input onclick = "getanswer()" type="radio" name="answer" value="F"> 4 <br>
+  <input  onclick = "getanswer()" type="radio" name="answer" value="F"> 5 <br>
+  <input  onclick = "getanswers()" type="radio" name="answer" value="F"> 6 <br>
+  <input  onclick = "getanswer()" type="radio" name="answer" value="F" checked> No idea </div>
+</form></center>
+<center><button id="sub">Submit</button></center>
+<img onmouseenter="getcheat()" border="0" src="ch.png" alt="cheat" width="32" height="32" align="right">
+</body>
+<script> 
+localStorage.setItem("p3a", "F");
+
+document.getElementById("sub").addEventListener("click", sname); 
+
+function sname() {
+    window.location.href ='p4.html';
+}
+function getanswer(){
+  localStorage.setItem("p3a", "F");
+}
+function getanswers(){
+  localStorage.setItem("p3a", "T");
+}
+setTimeout(function(){
+  window.location.href='p4.html'},20000 );
+  
+function getcheat() {
+    var x =localStorage.cheat;
+    if( x == "0"){
+      alert("6");
+      localStorage.setItem("cheat", "1");
+    }
+     else if(x == "1"){
+      alert("6");
+      localStorage.setItem("cheat", "2");
+     }
+     else{
+      alert("You have been caught cheating");
+      localStorage.setItem("p3a", "F");
+      window.location.href ='p4.html';
+     }
+}
+
+</script>
+</html>

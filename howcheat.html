@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: red;
+}
+p {
+  font-size: 200%;
+  font-style: italic;
+}
+
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid black;
+    padding: 25px;
+    margin: 25px;
+}
+w
+
+</style>
+</head>
+<body background ="pap.jpg">
+<audio autoplay loop>
+  <source src="TheBuilder.mp3">
+</audio>
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="score.html">Your Score</a></li>
+</ul>
+<h1> <center> How to cheat! </center> </h1>
+<p> First move your mouse over the cheater image in the lower right corner of the screen</p>
+<center><div> Question will show up here<br><br><form>
+  <input type="radio" name="answer" value="T" > Answer1<br>
+  <input type="radio" name="answer" value="F"> Answer2<br>
+  <input type="radio" name="answer" value="F"> Answer3<br>
+  <input type="radio" name="answer" value="F"> Answer4<br>
+  <input type="radio" name="answer" value="F" checked> Answer5 </div>
+</form></center>
+<img onmouseenter="getcheat()" border="0" src="ch.png" alt="cheat" width="32" height="32" align="right">
+<center><a href ="p1.html"><button id="sub">Take the Python Test</button></a>
+<a href ="cs1.html"><button id="sub">Take the Computer Science Test</button></a></center>
+</body>
+<script> 
+function getcheat() {
+    alert("The answer will be displayed here");
+}
+
+</script>
+</html>

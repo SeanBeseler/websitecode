@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: red;
+}
+p {
+  font-size: 200%;
+  font-style: italic;
+}
+p.bold {
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body background ="pap.jpg">
+<audio autoplay loop>
+  <source src="TheBuilder.mp3">
+</audio>
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="score.html">Your Score</a></li>
+</ul>
+<center><h1 id ="temp"> </h1></center>
+<p class = "bold"> Python Quiz </p>
+<p id ="p1"> </p>
+<p id ="p2"> </p>
+<p id ="p3"> </p>
+<p id ="p4"> </p>
+<p id ="p5"> </p>
+<p class ="bold"> Computer Science Quiz </p>
+<p id ="cs1"> </p>
+<p id ="cs2"> </p>
+<p id ="cs3"> </p>
+<p id ="cs4"> </p>
+<p id ="cs5"> </p><br><br>
+<a href ="p1.html"><button id="sub">Take the Python Test</button></a>
+<a href ="cs1.html"><button id="sub">Take the Computer Science Test</button></a>
+
+</body>
+<script>
+var n = ("Hi "+ localStorage.username+ ". Lets see how you did!");
+var p1 = localStorage.p1a;
+var p2 = localStorage.p2a;
+var p3 = localStorage.p3a;
+var p4 = localStorage.p4a;
+var p5 = localStorage.p5a;
+var cs1 = localStorage.cs1a;
+var cs2 = localStorage.cs2a;
+var cs3 = localStorage.cs3a;
+var cs4 = localStorage.cs4a;
+var cs5 = localStorage.cs5a;
+var pt1;
+var pt2;
+var pt3;
+var pt4;
+var pt5;
+var cst1;
+var cst2;
+var cst3;
+var cst4;
+var cst5;
+if(p1 == "T" || p1 =="F"){
+  if(p1 =="T"){
+    pt1 = ("Question 1: You got it right!");
+  }
+  else{
+    pt1 = (" Question 1: You got it wrong. The correct answer was: defines a function, which does nothing.");
+  }
+}
+else{
+  pt1 = ("You have not answered the question yet.");
+}
+if(p2 == "T" || p2 =="F"){
+  if(p2 =="T"){
+    pt2 = ("Question 2: You got it right!");
+  }
+  else{
+    pt2 = (" Question 2: You got it wrong. The correct answer was: An int");
+  }
+}
+else{
+  pt2 = ("You have not answered the question yet.");
+}
+if(p3 == "T" || p3 =="F"){
+  if(p3 =="T"){
+    pt3 = ("Question 3: You got it right!");
+  }
+  else{
+    pt3 = (" Question 3: You got it wrong. The correct answer was: 6.");
+  }
+}
+else{
+  pt3 = ("You have not answered the question yet.");
+}
+if(p4 == "T" || p4 =="F"){
+  if(p4 =="T"){
+    pt4 = ("Question 4: You got it right!");
+  }
+  else{
+    pt4 = (" Question 4: You got it wrong. The correct answer was: 95.");
+  }
+}
+else{
+  pt4= ("You have not answered the question yet.");
+}
+if(p5 == "T" || p5 =="F"){
+  if(p5 =="T"){
+    pt5 = ("Question 5: You got it right!");
+  }
+  else{
+    pt5 = (" Question 5: You got it wrong. The correct answer was: **.");
+  }
+}
+else{
+  pt5 = ("You have not answered the question yet.");
+}
+if(cs1 == "T" || cs1 =="F"){
+  if(cs1 =="T"){
+    cst1 = ("Question 1: You got it right!");
+  }
+  else{
+    cst1 = (" Question 1: You got it wrong. The correct answer was: Search");
+  }
+}
+else{
+  cst1 = ("You have not answered the question yet.");
+}
+if(cs2 == "T" || cs2 =="F"){
+  if(cs2 =="T"){
+    cst2 = ("Question 2: You got it right!");
+  }
+  else{
+    cst2 = (" Question 2: You got it wrong. The correct answer was: CPU");
+  }
+}
+else{
+  cst2 = ("You have not answered the question yet.");
+}
+if(cs3 == "T" || cs3 =="F"){
+  if(cs3 =="T"){
+    cst3 = ("Question 3: You got it right!");
+  }
+  else{
+    cst3 = (" Question 3: You got it wrong. The correct answer was: 01");
+  }
+}
+else{
+  cst3 = ("You have not answered the question yet.");
+}
+if(cs4 == "T" || cs4 =="F"){
+  if(cs4 =="T"){
+    cst4 = ("Question 4: You got it right!");
+  }
+  else{
+    cst4 = (" Question 4: You got it wrong. The correct answer was: Control Unit");
+  }
+}
+else{
+  cst4 = ("You have not answered the question yet.");
+}
+if(cs5 == "T" || cs5 =="F"){
+  if(cs5 =="T"){
+    cst5 = ("Question 5: You got it right!");
+  }
+  else{
+    cst5 = (" Question 5: You got it wrong. The correct answer was: 2");
+  }
+}
+else{
+  cst5 = ("You have not answered the question yet.");
+}
+document.getElementById("temp").innerHTML = n;
+document.getElementById("p1").innerHTML = pt1;
+document.getElementById("p2").innerHTML = pt2;
+document.getElementById("p3").innerHTML = pt3;
+document.getElementById("p4").innerHTML = pt4;
+document.getElementById("p5").innerHTML = pt5;
+document.getElementById("cs1").innerHTML = cst1;
+document.getElementById("cs2").innerHTML = cst2;
+document.getElementById("cs3").innerHTML = cst3;
+document.getElementById("cs4").innerHTML = cst4;
+document.getElementById("cs5").innerHTML = cst5;
+</script>
+</html>

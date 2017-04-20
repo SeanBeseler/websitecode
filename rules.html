@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: red;
+}
+p {
+  font-size: 200%;
+  font-style: italic;
+}
+p.bold {
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body background ="pap.jpg">
+<audio autoplay loop>
+  <source src="TheBuilder.mp3">
+</audio>
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="score.html">Your Score</a></li>
+</ul>
+<center><h1 id ="temp"> </h1></center>
+<p class = "bold"> Rule 1 </p>
+<p> All questons will be multiple choice.</p>
+<p class ="bold"> Rule 2 </p>
+<p> You will have 20 seconds to select an answer. Once the time runs out you will be directed to the next question. </p>
+<p class ="bold"> Rule 3 </p>
+<p> You can cheat twice.</p>
+<p> If you cheat a third time you will get zero for the question.</p>
+<a href ="p1.html"><button id="sub">Take the Python Test</button></a>
+<a href ="cs1.html"><button id="sub">Take the Computer Science Test</button></a>
+<a href ="howcheat.html"><button id="sub">Learn how to cheat</button></a>
+</body>
+<script>
+var n = ("Hi "+ localStorage.username+ ". Here are the rules");
+document.getElementById("temp").innerHTML = n;
+</script>
+</html>
